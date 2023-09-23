@@ -1,0 +1,135 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1440px;
+}
+
+svg {
+  /* margin-bottom: 1rem; */
+  width: 64px;
+  height: 60px;
+}
+
+.car-name {
+  margin-bottom: 1rem;
+  font-family: Big Shoulders Display;
+  text-transform: uppercase;
+}
+
+.car-description {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: var(--Transparent-white);
+  margin-bottom: 3rem;
+  font-family: Lexend Deca;
+}
+
+.sedan {
+  background-color: var(--Bright-orange);
+  color: var(--Very-light-gray);
+  padding: 1.8rem;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.suv {
+  background-color: var(--Dark-cyan);
+  color: var(--Very-light-gray);
+  padding: 1.8rem;
+}
+
+.luxury {
+  background-color: var(--Very-dark-cyan);
+  color: var(--Very-light-gray);
+  padding: 1.8rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 0.5rem;
+  font-family: Lexend Deca;
+}
+.btn--sedan {
+  color: var(--Bright-orange);
+}
+
+.btn--suv {
+  color: var(--Dark-cyan);
+}
+
+.btn--luxury {
+  color: var(--Very-dark-cyan);
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 375px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .car-name {
+    font-size: 1.2rem;
+  }
+
+  .car-description {
+    font-size: 0.5rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .sedan {
+    padding: 2rem;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+
+  .suv {
+    padding: 2rem;
+  }
+
+  .luxury {
+    padding: 2rem;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0;
+  }
+}
